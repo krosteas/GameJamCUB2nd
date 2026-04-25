@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "DayManager.h"
-#include "Feastmanager.h"
+#include "GameLoop/DayManager.h"
+#include "GameLoop/Feastmanager.h"
 
 ADayManager::ADayManager()
 {

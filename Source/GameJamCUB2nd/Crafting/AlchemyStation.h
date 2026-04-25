@@ -5,8 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "CraftingComponent.h"
-#include "RecipeData.h"
-#include "ItemData.h"
+#include "Items/RecipeData.h"
+#include "Items/ItemData.h"
 #include "AlchemyStation.generated.h"
 
 UCLASS()

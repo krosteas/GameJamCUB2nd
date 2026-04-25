@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "RecipeData.h"
-#include "ItemData.h"
+#include "Items/RecipeData.h"
+#include "Items/ItemData.h"
 #include "Feastmanager.generated.h"
 
 USTRUCT(BlueprintType)
