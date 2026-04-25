@@ -1,34 +1,62 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "Customers/CustomerOrderComponent.h"
 
-#include "CustomerOrderComponent.h"
-
-// Sets default values for this component's properties
 UCustomerOrderComponent::UCustomerOrderComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
+	PrimaryComponentTick.bCanEverTick = false;
 }
 
-
-// Called when the game starts
 void UCustomerOrderComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// ...
-	
 }
 
-
-// Called every frame
-void UCustomerOrderComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UCustomerOrderComponent::TickComponent(float DeltaTime, ELevelTick TickType,
+	FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
+// ─────────────────────────────────────────────
+//  Actions
+// ─────────────────────────────────────────────
+
+bool UCustomerOrderComponent::EvaluateOffer(UItemData* Item, EItemQuality Quality)
+{
+	if (!Item || !RequestedItem) return false;
+	if (bFulfilled) return false;
+
+	// Wrong item
+	if (Item != RequestedItem)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Order rejected — wrong item"));
+		return false;
+	}
+
+	// Quality too low
+	if (Quality < MinimumQuality)
+	{
+		UE_LOG(LogTemp, Log, TEXT("Order rejected — quality too low"));
+		return false;
+	}
+
+	bFulfilled = true;
+	UE_LOG(LogTemp, Log, TEXT("Order fulfilled: %s"), *Item->ItemName.ToString());
+	return true;
+}
+
+void UCustomerOrderComponent::GenerateOrder(const TArray<UItemData*>& AvailableItems,
+	EItemQuality MinQuality)
+{
+	if (AvailableItems.Num() == 0) return;
+
+	// Pick a random item from the available pool
+	int32 RandomIndex = FMath::RandRange(0, AvailableItems.Num() - 1);
+	RequestedItem = AvailableItems[RandomIndex];
+	MinimumQuality = MinQuality;
+	bFulfilled = false;
+
+	UE_LOG(LogTemp, Log, TEXT("Order generated: %s (min quality: %d)"),
+		*RequestedItem->ItemName.ToString(), (int32)MinimumQuality);
+}
