@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GameJamCUB2nd",
+			"Path": "..\\Source\\GameJamCUB2nd.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GameJamCUB2ndEditor",
+			"Path": "..\\Source\\GameJamCUB2ndEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

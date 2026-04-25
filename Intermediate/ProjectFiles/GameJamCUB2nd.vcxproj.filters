@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GameJamCUB2nd.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GameJamCUB2nd.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GameJamCUB2ndEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GameJamCUB2nd">
+      <UniqueIdentifier>{37E48878-3E6F-3FBA-91D0-1C0DE45FBB7B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GameJamCUB2nd\GameJamCUB2nd.Build.cs">
+      <Filter>Source\GameJamCUB2nd</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\GameJamCUB2nd.cpp">
+      <Filter>Source\GameJamCUB2nd</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\GameJamCUB2nd.h">
+      <Filter>Source\GameJamCUB2nd</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Crafting">
+      <UniqueIdentifier>{5A4F1A67-D077-36AF-A164-6DA4B07FC8F1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Crafting\AlchemyStation.cpp">
+      <Filter>Source\GameJamCUB2nd\Crafting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Crafting\AlchemyStation.h">
+      <Filter>Source\GameJamCUB2nd\Crafting</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Crafting\CraftingComponent.cpp">
+      <Filter>Source\GameJamCUB2nd\Crafting</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Crafting\CraftingComponent.h">
+      <Filter>Source\GameJamCUB2nd\Crafting</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Customers">
+      <UniqueIdentifier>{02C64C81-7069-3559-A064-3DBFD9C6BF7A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Customers\CustomerNPC.cpp">
+      <Filter>Source\GameJamCUB2nd\Customers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Customers\CustomerNPC.h">
+      <Filter>Source\GameJamCUB2nd\Customers</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Customers\CustomerOrderComponent.cpp">
+      <Filter>Source\GameJamCUB2nd\Customers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Customers\CustomerOrderComponent.h">
+      <Filter>Source\GameJamCUB2nd\Customers</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Gameloop">
+      <UniqueIdentifier>{F8A51DBB-A521-39FE-AF94-6FE68BCA53AF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Gameloop\DayManager.cpp">
+      <Filter>Source\GameJamCUB2nd\Gameloop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Gameloop\DayManager.h">
+      <Filter>Source\GameJamCUB2nd\Gameloop</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Gameloop\Feastmanager.cpp">
+      <Filter>Source\GameJamCUB2nd\Gameloop</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Gameloop\Feastmanager.h">
+      <Filter>Source\GameJamCUB2nd\Gameloop</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Interaction">
+      <UniqueIdentifier>{CCF396A9-A31A-37A0-81F1-F162F542FE2F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Interaction\IInteractableInterface.cpp">
+      <Filter>Source\GameJamCUB2nd\Interaction</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Interaction\IInteractableInterface.h">
+      <Filter>Source\GameJamCUB2nd\Interaction</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Items">
+      <UniqueIdentifier>{7E3D902D-E61A-3B50-8A4B-C69DDB8E0F62}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Items\ItemData.cpp">
+      <Filter>Source\GameJamCUB2nd\Items</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Items\ItemData.h">
+      <Filter>Source\GameJamCUB2nd\Items</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Items\RecipeData.cpp">
+      <Filter>Source\GameJamCUB2nd\Items</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Items\RecipeData.h">
+      <Filter>Source\GameJamCUB2nd\Items</Filter>
+    </ClInclude>
+    <Filter Include="Source\GameJamCUB2nd\Player">
+      <UniqueIdentifier>{0EC82FA2-6201-3CAD-98EF-D9CEE167070D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameJamCUB2nd\Player\ShopKeeperCharacter.cpp">
+      <Filter>Source\GameJamCUB2nd\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameJamCUB2nd\Player\ShopKeeperCharacter.h">
+      <Filter>Source\GameJamCUB2nd\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
