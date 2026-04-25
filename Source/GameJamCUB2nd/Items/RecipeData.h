@@ -27,6 +27,10 @@ struct FRecipeStep
 	/** Position in the crafting sequence (1 = first added) */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Recipe", meta = (ClampMin = "1"))
 	int32 OrderIndex = 1;
+
+	/** Whether this ingredient must be ground in the mortar before adding */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Recipe")
+	bool bRequiresGrinding = false;
 };
 
 // ─────────────────────────────────────────────
@@ -88,4 +92,13 @@ public:
 	/** Returns the number of steps in this recipe */
 	UFUNCTION(BlueprintPure, Category = "Crafting")
 	int32 GetStepCount() const { return Steps.Num(); }
+
+	/** How many hourglass turns (10s each) the recipe needs on heat */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Crafting", meta = (ClampMin = "1"))
+	int32 RequiredHeatTurns = 1;
+
+	/** The base liquid this recipe requires (Water, Wine, Beer, Spirits) */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Crafting")
+	TObjectPtr<UItemData> RequiredBase = nullptr;
+
 };
